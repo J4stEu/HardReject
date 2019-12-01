@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 01 2019 г., 07:37
+-- Время создания: Дек 01 2019 г., 13:11
 -- Версия сервера: 10.1.21-MariaDB
 -- Версия PHP: 5.6.30
 
@@ -31,17 +31,19 @@ CREATE TABLE `projects` (
   `user_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `online` tinyint(1) NOT NULL DEFAULT '0',
-  `example` varchar(100) NOT NULL
+  `example` varchar(100) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `projects`
 --
 
-INSERT INTO `projects` (`id`, `user_id`, `name`, `online`, `example`) VALUES
-(1, 1, 'Создание презентации', 0, 'files/example.txt'),
-(2, 1, 'Мой второй проект', 0, ''),
-(3, 1, 'Мой третий проект', 0, '');
+INSERT INTO `projects` (`id`, `user_id`, `name`, `online`, `example`, `description`) VALUES
+(1, 1, 'Создание презентации', 0, 'files/example.txt', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam autem voluptas, laborum. Dolores, ipsum, natus. Sit, soluta reiciendis nemo commodi exercitationem vel, modi suscipit in amet, voluptatum quibusdam laborum ullam.'),
+(2, 1, 'Создание сайта', 0, '', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam autem voluptas, laborum. Dolores, ipsum, natus. Sit, soluta reiciendis nemo commodi exercitationem vel, modi suscipit in amet, voluptatum quibusdam laborum ullam.'),
+(3, 2, 'Видеообработка', 0, '', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam autem voluptas, laborum. Dolores, ipsum, natus. Sit, soluta reiciendis nemo commodi exercitationem vel, modi suscipit in amet, voluptatum quibusdam laborum ullam.'),
+(4, 1, 'Компьютерные сети', 0, '', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque vel, incidunt tempore asperiores quae, eligendi sint fuga aut. Asperiores dolor iste perspiciatis nemo mollitia similique quidem hic, pariatur debitis unde.');
 
 -- --------------------------------------------------------
 
@@ -114,7 +116,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `team`
 --

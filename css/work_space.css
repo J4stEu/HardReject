@@ -101,7 +101,6 @@
 	font-size: 1.2em;
 	display: inline;	
 	cursor: pointer;
-	text-transform: capitalize;
 }
 .nav_pos:first-child{
 	margin-top: 0;

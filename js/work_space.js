@@ -129,8 +129,8 @@ function main_line_dependence(){
 
 //change sphere settings
 $('.change_sphere').click(function () {
-	alert('Переход в онлайн ещё находится в разработке!');
-  /*$.ajax({
+	//alert('Переход в онлайн ещё находится в разработке!');
+  $.ajax({
     url: 'php/sh_change.php', 
     type: 'POST',
     dataType: 'json', 
@@ -146,7 +146,7 @@ $('.change_sphere').click(function () {
     error:function(){
       alert('Уведомление! Что-то пошло не так...');
     },
-  });*/
+  });
 });
 
 //log out settings

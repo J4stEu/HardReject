@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 01 2019 г., 07:38
+-- Время создания: Дек 01 2019 г., 13:11
 -- Версия сервера: 10.1.21-MariaDB
 -- Версия PHP: 5.6.30
 
@@ -43,6 +43,27 @@ INSERT INTO `done` (`id`, `task_id`, `complete_file`, `confirmation`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `rating`
+--
+
+CREATE TABLE `rating` (
+  `id` int(11) NOT NULL,
+  `pr_id` int(11) NOT NULL,
+  `likes` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `rating`
+--
+
+INSERT INTO `rating` (`id`, `pr_id`, `likes`) VALUES
+(1, 1, 25),
+(2, 1, 50),
+(3, 2, 100);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `tasks`
 --
 
@@ -73,6 +94,12 @@ ALTER TABLE `done`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `rating`
+--
+ALTER TABLE `rating`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `tasks`
 --
 ALTER TABLE `tasks`
@@ -87,6 +114,11 @@ ALTER TABLE `tasks`
 --
 ALTER TABLE `done`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `rating`
+--
+ALTER TABLE `rating`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `tasks`
 --

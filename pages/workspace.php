@@ -42,7 +42,7 @@
 					<p class="team_count"><?php echo 'Команда(чел):'.count($count_team) ?></p>
 					<?php
 						if ($_SESSION['logged_user']['ws_project'] === $projects[$i]['id']) echo '<p class="project_alert">Проект активен сейчас!</p>';
-						else echo '<p class="project_de_alert">Проект сейчас не активен!</p>';
+						else echo '<p class="project_de_alert">Проект в режиме ожидания!</p>';
 					?>
 				</div>
 		<?php 
