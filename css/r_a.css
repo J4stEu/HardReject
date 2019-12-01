@@ -1,0 +1,255 @@
+#r_a{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: #FFE4B4;
+}
+
+/*sphere styles*/
+.square_conteiner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  justify-content: center;
+	transition: 0.5s ease;
+}
+.square_enter{
+	width: 1000px;
+}
+.sq_1{
+	 float: left;
+}
+.sq_2{
+	 float: right;
+}
+.square{
+	position: relative;
+	margin: 100px;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: visible;
+	cursor: pointer;
+}
+.square span:nth-child(1){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(130, 113, 213, 0.8);
+	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+	transition: 0.5s;
+	animation: sphere_1 6s linear infinite;
+}
+.square:hover span:nth-child(1){
+	border: none;
+	background: rgba(130, 113, 213, 0.5);
+}
+.square span:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(130, 113, 213, 0.8);
+	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+	transition: 0.5s;
+	animation: sphere_1 4s linear infinite;
+}
+.square:hover span:nth-child(2){
+	border: none;
+	background: rgba(130, 113, 213, 0.5);
+}
+.square span:nth-child(3){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(130, 113, 213, 0.8);
+	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+	transition: 0.5s;
+	animation: sphere_1 10s linear infinite;
+}
+.square:hover span:nth-child(3){
+	border: none;
+	background: rgba(130, 113, 213, 0.5);
+}
+@keyframes sphere_1{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes sphere_2{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.square_content{
+	position: relative;
+	padding: 40px 60px;
+	color: #fff;
+	text-align: center;
+	transition: 0.5s;
+}
+.square_content a{
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	border: 2px solid #fff;
+	border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%
+}
+.square_content a:hover{
+	background: #fff;
+	color: #333;
+}
+
+/*auth-reg styles*/
+#enter_conteiner{
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	background: white;
+	border-radius: 15px;
+	left: 50%;
+  top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: none;
+	transition: box-shadow 0.5s;
+	z-index: 1;
+	overflow: visible;
+	display: none;
+}
+.auth, .reg{
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 80%;
+	border-right: 1px solid #8271d5;
+	transition: all 0.4s ease-out;
+}
+.auth{
+	width: 80%;
+}
+.reg{
+	float: right;
+	width: calc(20% - 1px);
+	border-right: 0px solid #8271d5;
+}
+.auth_shadow, .reg_shadow{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: rgba(130, 113, 213, 0.8);
+	cursor: pointer;
+	border-radius: 0 15px 15px 0;
+}
+.auth_shadow {
+	border-radius: 15px 0 0 15px;
+  display: none;
+}
+.auth .im-arrow-right, .reg .im-arrow-left, .auth .im-magnifier-plus, .reg .im-magnifier-plus{
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #FF7777;
+  font-size: 2em;
+  text-align: center;
+}
+.auth .im-magnifier-plus, .reg .im-arrow-left, .auth .im-arrow-right{
+  display: none;
+}
+.enter_title{
+	position: absolute;
+	right: 60px;
+	top: -28px;
+	color: #A598EA;
+}
+.change_enter, .close_enter{
+	position: absolute;
+	top: -30px;
+	right: 0;
+	cursor: pointer;
+}
+.change_enter{
+	right: 30px;
+}
+.change_enter i, .close_enter i{
+	color: #A598EA;
+	opacity: 0.5;
+	transition: 0.5s ease;
+}
+.change_enter i:hover, .close_enter i:hover{
+	opacity: 1;
+}
+
+/*auth-reg forms*/
+.enter_hide_conteiner{
+	position: absolute;
+	left: 50%;
+	top: calc(50% - 20px);
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+.enter_hide_conteiner div{
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+.enter_hide_conteiner div:first-child, .enter_hide_conteiner div:last-child{
+  margin-top: 0;
+}
+.enter_hide_conteiner input{
+  width: 200px;
+  height: 30px;
+  padding-left:5px;
+  background: rgba(255, 154, 64, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.enter_hide_conteiner .panel_button{
+  position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 50%;
+	top: calc(100% + 20px);
+	transform: translate(-50%, 0);
+	text-align: center;
+	border-radius: 50%;
+	margin: auto;
+	cursor: pointer;
+}
+.panel_button i{
+  font-size: 1.5em;
+  color: #6D89D5;
+	padding: 2px;
+}
+
+/*log out*/
+#log_out{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+#log_out i{
+	color: #8271d5;
+	font-size: 2em;
+}
