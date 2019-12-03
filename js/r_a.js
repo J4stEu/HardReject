@@ -262,10 +262,8 @@ $('#a_panel_button').click(function(){
         pass: $('#a_pass').val()
       },
       success: function(data){
-        alert('Уведомление!' + data + ' Перезагрузка через 3 секунды.');
-        setTimeout(function(){
-          location.reload();
-        }, 3000);
+        alert('Уведомление!' + data + ' Нажмите "ОК."');
+        location.reload();
       },
       error:function(){
         alert('Уведомление! Что-то пошло не так...');
@@ -286,10 +284,8 @@ $('#log_out').click(function () {
       log_out: true
     },
     success: function(data){
-      alert('Уведомление!' + data + ' Перезагрузка через 3 секунды...');
-      setTimeout(function(){
-        location.reload();
-      }, 3000);
+      alert('Уведомление!' + data + ' Нажмите "ОК."');
+      location.reload();
     },
     error:function(){
       alert('Уведомление! Что-то пошло не так...');

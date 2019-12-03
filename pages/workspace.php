@@ -135,6 +135,6 @@
 		<?php
 			}
 		?>
-		<div class="file"><a href="<?php echo $project['example']?>" download>ФАЙЛ</a></div>
+		<div class="file"><a href="<?php echo $project['example']?>" download>ФАЙЛ ПРОТОТИП ПРОЕКТА</a></div>
 	</div>
 </section>

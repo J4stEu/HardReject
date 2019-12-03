@@ -23,6 +23,7 @@ function descr_position() {
 //main menu settings
 $('.nav_pos p').mouseover(function () {
 	if (menu_main_mode) {
+		descr_position();
 		$('.right_visible').css('opacity' , '0');
 		$('#' + $(this).parent().prop('id') + ' .description').fadeIn(200);
 		var addr = parseInt(($(this).parent().prop('id')).match(/\d+/));
@@ -138,10 +139,8 @@ $('.change_sphere').click(function () {
       sh_change: true
     },
     success: function(data){
-      alert('Уведомление!' + data + ' Перезагрузка через 3 секунды...');
-      setTimeout(function(){
-        location.reload();
-      }, 3000);
+			alert(data + ' Нажмите "ОК".');
+      location.reload();
     },
     error:function(){
       alert('Уведомление! Что-то пошло не так...');
@@ -159,10 +158,8 @@ $('.log_out').click(function () {
       log_out: true
     },
     success: function(data){
-      alert('Уведомление!' + data + ' Перезагрузка через 3 секунды...');
-      setTimeout(function(){
-        location.reload();
-      }, 3000);
+			alert(data + ' Нажмите "ОК".');
+      location.reload();
     },
     error:function(){
       alert('Уведомление! Что-то пошло не так...');
