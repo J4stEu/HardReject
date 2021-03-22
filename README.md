@@ -5,8 +5,32 @@
 Проект не закончен, версия beta 1.0. Суть данной beta версии состоит в том, чтобы показать основную реализацию проекта и основные фишки. Проект не является кроссплатформенным или адаптивным.
 Реализованные моменты: дизайн(beta), регистрация, авторизация, работа с проектами (beta), вывод проектов в сеть и отслеживание проектов в сети(alfa).
 
-Что использовалось при создании: HTML, CSS, JavaScriptб jQuery, PHP, RebBeanPHP, MySQL, Bezier(работа с деревом проекта).
+
+Stack:
+- HTML; 
+- CSS (Sass, FlexBox, Grid);
+- JS (jQuery, Bezier);
+- PHP (RebBeanPHP);
+- MySQL.
+
 Локальный сервер, использованный при создании: xampp.
 
 Проект работает с двумя базами данных. Первая база данных отвечает за хранения простой информации о проекте. Вторая база данных отвечает за реализацию работы в проектах и вывода проектов в сеть.
 Перед запуском нужно установить файлы БД "hardreject.sql" и "hard_reject_projects.sql", которые находятся в папке с проектом. Для входа в систему введите (email: example@mail.ru) и (пароль: Abc123) в форме авторизайции.
+
+Demo:
+- Панель регистрации/авторизации + выбор секции  
+![Reg/auth](https://github.com/J4stEu/HardReject/blob/master/projectDemo/1.png?raw=true)
+- Регистрация/авторизация  
+![Reg/auth panel](https://github.com/J4stEu/HardReject/blob/master/projectDemo/2.png?raw=true)
+- Панель работы над проектами - 1  
+![Projects](https://github.com/J4stE  HardReject/blob/master/projectDemo/3.png?raw=true)
+- Панель работы над проектами - 2  
+![Projects panel - 2](https://github.com/J4stEu/HardReject/blob/master/projectDemo/4.png?raw=true)
+- Проекты  
+![Projects](https://github.com/J4stEu/HardReject/blob/master/projectDemo/5.png?raw=true)
+- Ход выполнения  
+![Status](https://github.com/J4stEu/HardReject/blob/master/projectDemo/6.png?raw=true)
+- Готовые/опубликованные проекты  
+![Ready projects](https://github.com/J4stEu/HardReject/blob/master/projectDemo/7.png?raw=true)
+
